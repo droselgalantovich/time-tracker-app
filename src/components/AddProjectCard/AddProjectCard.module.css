@@ -1,0 +1,61 @@
+.containerCard {
+  display: flex;
+  width: 343px;
+  max-width: 343px;
+  min-width: 343px;
+  padding: 12px;
+  height: 174.6px;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 2px dashed #d1d5db;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  justify-content: center;
+  align-items: center;
+  min-height: 140px;
+}
+
+.containerCard:hover {
+  border-color: #3b82f6;
+  background-color: #f8fafc;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.plusIcon {
+  font-size: 32px;
+  color: #6b7280;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.containerCard:hover .plusIcon {
+  color: #3b82f6;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.containerCard:hover .text {
+  color: #3b82f6;
+}
+
+@media (max-width: 375px) {
+  .containerCard {
+    min-width: unset;
+    width: 100%;
+    max-width: calc(100vw - 32px);
+  }
+}

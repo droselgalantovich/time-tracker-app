@@ -1,0 +1,92 @@
+.containerCard {
+  display: flex;
+  width: 343px;
+  max-width: 343px;
+  min-width: 343px;
+  padding: 12px;
+  min-height: 174px;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  box-sizing: border-box;
+}
+
+@media (max-width: 375px) {
+  .containerCard {
+    min-width: unset;
+    width: 100%;
+    max-width: calc(100vw - 32px);
+  }
+}
+
+.logoProject {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 16px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.logoProject img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.headerCard {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.headerCard h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px 0;
+  line-height: 1.25;
+}
+
+.headerCard p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.dataDevelop {
+  margin-bottom: 12px;
+  flex-grow: 1;
+  border-bottom: 1px solid #e5e7eb;
+  margin-left: -12px;
+  margin-right: -12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.dataDevelop p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 25px;
+}
+
+.buttonCard {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonCard button {
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}

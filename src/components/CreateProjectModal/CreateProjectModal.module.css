@@ -1,0 +1,327 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0c111d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  width: 100vw;
+  min-width: unset;
+  max-width: 100vw;
+}
+
+.modal {
+  width: 343px;
+
+  padding: 16px;
+  border-radius: 8px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconContainer {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.bgIcon {
+  position: absolute;
+  top: 50%;
+  left: -30%;
+  transform: translateY(-19%);
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.titleForm {
+  z-index: 100;
+}
+
+.titleForm h2 {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 10px;
+}
+
+.titleForm p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #475467;
+}
+
+.inputGroup {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-size: 14px;
+  color: #344054;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.inputGroup input {
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .buttons {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .buttons button {
+    width: 170px;
+    height: 44px;
+  }
+
+  .modal {
+    width: 400px;
+  }
+}
+
+.buttons button {
+  padding: 10px 0;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid #d0d5dd;
+  background: transparent;
+  cursor: pointer;
+}
+
+.buttons button:first-child {
+  background: #7f56d9;
+  color: white;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.inputPresentTime {
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.inputPresentTime p {
+  font-size: 14px;
+  color: #344054;
+  font-weight: 500;
+  margin: 0;
+}
+
+.inputPresentTime label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.inputPresentTime input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  accent-color: #7f56d9;
+  cursor: pointer;
+  margin: 0;
+  border-radius: 4px;
+}
+.datePicker {
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+:global(.react-datepicker-wrapper) {
+  z-index: 999;
+  width: 100%;
+}
+
+:global(.react-datepicker) {
+  z-index: 9999 !important;
+
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+:global(.react-datepicker__month-container) {
+  z-index: 9999;
+}
+
+:global(.react-datepicker-popper) {
+  z-index: 9999 !important;
+}
+
+:global(.react-datepicker-popper[data-placement^='bottom']) {
+  z-index: 9999 !important;
+}
+
+:global(.react-datepicker-popper[data-placement^='top']) {
+  z-index: 9999 !important;
+}
+
+.inputImage label {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+
+.inputImage input[type='file'] {
+  display: none;
+}
+
+.buttonDownload {
+  background: #7f56d9;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.buttonDownload:hover {
+  background: #6941c6;
+}
+
+.descriptionBtn {
+  background: #7f56d9;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.descriptionBtn:hover {
+  background: #6941c6;
+}
+
+.dateInputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.calendarIcon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  pointer-events: auto;
+  transition: opacity 0.2s ease;
+}
+
+.calendarIcon:hover {
+  opacity: 0.8;
+}
+
+.datePickerInput {
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  padding: 10px 40px 10px 14px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+.datePickerInput:focus {
+  outline: none;
+  border-color: #7f56d9;
+}
+
+/* Убираем стили react-datepicker для обертки инпута */
+:global(.react-datepicker__input-container) {
+  width: 100%;
+}
+
+:global(.react-datepicker__input-container input) {
+  width: 100% !important;
+}
+
+/* Стили для кнопок Confirm и Cancel */
+.confirmButton {
+  background: #7f56d9;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.confirmButton:hover:not(:disabled) {
+  background: #6941c6;
+}
+
+.confirmButton:disabled {
+  background: #d0d5dd;
+  cursor: not-allowed;
+}
+
+.cancelButton {
+  background: transparent;
+  color: #344054;
+  border: 1px solid #d0d5dd;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.cancelButton:hover {
+  background: #f9fafb;
+  border-color: #98a2b3;
+}
