@@ -64,4 +64,4 @@ public/               // Static files and icons
 
 ---
 
-Project created with Vite + React + TypeScript.
+Project created with Vite + React + TypeScript!!!
